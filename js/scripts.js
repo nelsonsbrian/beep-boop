@@ -1,5 +1,5 @@
 // business logic
-var numberTranslate = function(inputString) {
+var numberTranslate = function(inputString, userName) {
   var inputArr = inputString.split('');
   var outputArr = [];
   var output;
@@ -10,7 +10,12 @@ var numberTranslate = function(inputString) {
       var index = '';
 
       if (parseInt(number) % 3 === 0 && parseInt(number) > 0) {
-        index = "'I'm sorry Dave. I'm afraid I can't do that.''";
+        if (userName === "") {
+          userName = "Dave";
+        } else {
+          userName = userName.charAt(0).toUpperCase() + userName.substr(1,userName.length);
+        }
+        index = "'I'm sorry " + userName + ". I'm afraid I can't do that.''";
       } else if (number === "0") {
         index = "Beep!";
       } else if (number === "1") {
@@ -36,8 +41,9 @@ var stringify = function(funcInput) {
 $(document).ready(function() {
   $("form#toTranslate").submit(function(event) {
     event.preventDefault();
-    var userInput = $("#inputtxt").val();
-    output = numberTranslate(userInput);
+    var userInput = $("#inputTxt").val();
+    var userName = $("#inputName").val();
+    output = numberTranslate(userInput, userName);
     $("#result").text(output);
   });
 });
