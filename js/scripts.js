@@ -10,6 +10,8 @@ var numberTranslate = function(inputString) {
       var index = '';
       if (number === "0") {
         index = "Beep!";
+      } else if (number === "1") {
+          index = "Boop!";
       } else {
         index = number;
       }
