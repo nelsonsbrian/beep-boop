@@ -1,14 +1,13 @@
 // business logic
-var encrypt = function (inputString){
-
-
+var numberTranslate = function (inputString) {
+  return inputString;
 }
 // user logic
 $(document).ready(function() {
-  $("form#txtTranslator").submit(function(event) {
+  $("form#toTranslate").submit(function(event) {
     event.preventDefault();
     var userInput = $("#inputtxt").val();
-    output = encrypt(userInput);
+    output = numberTranslate(userInput);
     $("#result").text(output);
   });
 });
