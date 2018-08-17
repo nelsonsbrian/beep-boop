@@ -1,3 +1,8 @@
+body {
+  background: linear-gradient(to top right, #5143e8, #9387ff);
+  height: 1700px;
+}
+
 .result {
   font-size: 20px;
   display: none;
@@ -9,7 +14,9 @@ h1 {
 
 img {
   width: 225px;
-  margin-left: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .imgbox {
@@ -18,5 +25,21 @@ img {
 
 .dialogueBox {
   text-align: center;
-  height: auto;
+  height: 450px;
+  overflow: auto;
+}
+
+input#inputTxt, input#inputName, label, button.btn {
+  width: 325px;
+  text-align: center;
+}
+
+div.col-md-4.robot, div.col-md-4.human {
+  border: black 1px solid;
+  height: 700px;
+  /* overflow: auto; */
+}
+
+div.col-md-4 {
+  text-align: center;
 }

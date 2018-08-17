@@ -8,7 +8,6 @@ var numberTranslate = function(inputString, userName) {
   } else {
     inputArr.forEach(function(number) {
       var index = '';
-
       if (parseInt(number) % 3 === 0 && parseInt(number) > 0) {
         if (userName === "") {
           userName = "Dave";
@@ -26,16 +25,17 @@ var numberTranslate = function(inputString, userName) {
       outputArr.push(index);
     });
   }
-
   output = stringify(outputArr);
   // alert(outputArr);
   return output;
 };
 
+
 var stringify = function(funcInput) {
   output = funcInput.join("").toString();
   return output;
 };
+
 
 // user logic
 $(document).ready(function() {
@@ -51,8 +51,4 @@ $(document).ready(function() {
     $('.robot .imgBox').addClass('animated wobble delay-2s');
     // $('form#toTranslate').addClass('animated bounceOutLeft');
   });
-
-
-
-
 });
