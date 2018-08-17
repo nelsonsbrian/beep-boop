@@ -15,7 +15,7 @@ var numberTranslate = function(inputString, userName) {
         } else {
           userName = userName.charAt(0).toUpperCase() + userName.substr(1,userName.length);
         }
-        index = "'I'm sorry " + userName + ". I'm afraid I can't do that.''";
+        index = "I'm sorry " + userName + ". I'm afraid I can't do that.";
       } else if (number === "0") {
         index = "Beep!";
       } else if (number === "1") {
@@ -44,6 +44,15 @@ $(document).ready(function() {
     var userInput = $("#inputTxt").val();
     var userName = $("#inputName").val();
     output = numberTranslate(userInput, userName);
-    $("#result").text(output);
+    $(".humanSpeak").prepend('"' + userInput + '"<br>');
+    $(".robotSpeak").prepend('"' + output + '"<br>');
+    $(".result").show();
+    $('.human .imgBox').addClass('animated wobble');
+    $('.robot .imgBox').addClass('animated wobble delay-2s');
+    // $('form#toTranslate').addClass('animated bounceOutLeft');
   });
+
+
+
+
 });
