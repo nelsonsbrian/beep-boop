@@ -5,10 +5,13 @@ var numberTranslate = function(inputString) {
   var output;
   if (inputString.match(/[a-z]/i)) {
     outputArr.push("beepboop?");
-  } else if (/[0]/.test(inputString)) {
+  } else {
     inputArr.forEach(function(number) {
       var index = '';
-      if (number === "0") {
+
+      if (parseInt(number) % 3 === 0 && parseInt(number) > 0) {
+        index = "'I'm sorry Dave. I'm afraid I can't do that.''";
+      } else if (number === "0") {
         index = "Beep!";
       } else if (number === "1") {
           index = "Boop!";
@@ -17,8 +20,6 @@ var numberTranslate = function(inputString) {
       }
       outputArr.push(index);
     });
-  } else {
-    outputArr.push(inputString);
   }
 
   output = stringify(outputArr);
