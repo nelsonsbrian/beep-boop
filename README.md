@@ -18,7 +18,8 @@ _Simple webage that takes a user number input and has a robot respond to it._
 | **The program replaces 1 with "Boop!".** | Input: "1" | Output: "Boop" |
 | **The program returns a response of "I'm sorry, Dave. I'm afraid I can't do that." if the user input is divisible by 3.** | Input: "9" | Output: "I'm sorry, Dave. I'm afraid I can't do that." |
 
-
+## Spec
+  View at: https://nelsonsbrian.github.io/beep-boop/
 
 ## Setup/Installation Requirements
 

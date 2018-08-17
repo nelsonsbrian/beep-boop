@@ -26,7 +26,6 @@ var numberTranslate = function(inputString, userName) {
     });
   }
   output = stringify(outputArr);
-  // alert(outputArr);
   return output;
 };
 
@@ -49,6 +48,5 @@ $(document).ready(function() {
     $(".result").show();
     $('.human .imgBox').addClass('animated wobble');
     $('.robot .imgBox').addClass('animated wobble delay-2s');
-    // $('form#toTranslate').addClass('animated bounceOutLeft');
   });
 });

@@ -37,7 +37,6 @@ input#inputTxt, input#inputName, label, button.btn {
 div.col-md-4.robot, div.col-md-4.human {
   border: black 1px solid;
   height: 700px;
-  /* overflow: auto; */
 }
 
 div.col-md-4 {
