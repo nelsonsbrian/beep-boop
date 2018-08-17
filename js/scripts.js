@@ -1,10 +1,34 @@
 // business logic
-var numberTranslate = function (inputString) {
+var numberTranslate = function(inputString) {
+  var inputArr = inputString.split('');
+  var outputArr = [];
+  var output;
   if (inputString.match(/[a-z]/i)) {
-    return "beepboop?";
+    outputArr.push("beepboop?");
+  } else if (/[0]/.test(inputString)) {
+    inputArr.forEach(function(number) {
+      var index = '';
+      if (number === "0") {
+        index = "Beep!";
+      } else {
+        index = number;
+      }
+      outputArr.push(index);
+    });
+  } else {
+    outputArr.push(inputString);
   }
-  return inputString;
-}
+
+  output = stringify(outputArr);
+  // alert(outputArr);
+  return output;
+};
+
+var stringify = function(funcInput) {
+  output = funcInput.join("").toString();
+  return output;
+};
+
 // user logic
 $(document).ready(function() {
   $("form#toTranslate").submit(function(event) {
